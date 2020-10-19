@@ -4,30 +4,29 @@ class Twtxt < Formula
 platform. No ads, no tracking, your content, your data!
 "
   homepage "https://github.io/prologic/twtxt"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/prologic/twtxt/releases/download/0.1.0/twtxt_0.1.0_darwin_amd64.tar.gz"
-    sha256 "3da370194710a5d91eee9f6d49f391d356cf79ccbfe43a346127cef3755a0ccc"
+    url "https://github.com/prologic/twtxt/releases/download/0.1.1/twtxt_0.1.1_darwin_amd64.tar.gz"
+    sha256 "9e5e1e063b8218ee5236c5490b340f4e9a3ab09778571c430a1ed1b974403d53"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/prologic/twtxt/releases/download/0.1.0/twtxt_0.1.0_linux_amd64.tar.gz"
-      sha256 "1ecb795b1d57f08cbeb136c559c4f6d3334911335c069789a3ba31362818e80b"
+      url "https://github.com/prologic/twtxt/releases/download/0.1.1/twtxt_0.1.1_linux_amd64.tar.gz"
+      sha256 "2811288a86434b6793cc8dd2d011ec156c9fb3abccd4d712ba14ed6fc5ab2b96"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/prologic/twtxt/releases/download/0.1.0/twtxt_0.1.0_linux_arm64.tar.gz"
-        sha256 "d4c3736a397fc7cf7a0fda99bce00541ee5f5ce88b0e5b201d09a11307f1ddf4"
+        url "https://github.com/prologic/twtxt/releases/download/0.1.1/twtxt_0.1.1_linux_arm64.tar.gz"
+        sha256 "48a326a35806de06eb768493b0ac14fa186a5267eafa52d6051377a1386f6034"
       else
-        url "https://github.com/prologic/twtxt/releases/download/0.1.0/twtxt_0.1.0_linux_armv6.tar.gz"
-        sha256 "b54795885b3a19d6d51612a4681a1c57e1b532ef40d1415199dbf2a408002ab8"
+        url "https://github.com/prologic/twtxt/releases/download/0.1.1/twtxt_0.1.1_linux_armv6.tar.gz"
+        sha256 "e8f783ffdbe0b791632c142195aed1cd76970b63f0cef6a8a8b61e521331ae0b"
       end
     end
   end
 
   def install
     bin.install "twt"
-    bin.install "twtd"
   end
 end
